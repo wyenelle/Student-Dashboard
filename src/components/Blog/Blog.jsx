@@ -1,14 +1,31 @@
-import React from 'react'
-import BlogAdmission from './BlogAdmission'
+import React from "react";
+import Footer from "../Home/Footer";
+import BlogAdmission from "./BlogAdmission";
+import BlogAdmissionLg from "./BlogAdmissionLg";
+import BlogCollab from "./BlogCollab";
+import BlogSchool from "./BlogSchool";
 
 const Blog = () => {
   return (
-    <main className='w-full h-screen border border-blck'>
+    <main className="w-full h-screen ">
+      <div className="w-full">
         <div className="w-full">
-        <BlogAdmission /> 
+          <BlogSchool />
         </div>
-    </main>
-  )
-}
+        <div className="block lg:hidden">
+          <BlogAdmission />
+        </div>
+        <div className="hidden lg:block">
+          <BlogAdmissionLg />
+        </div>
 
-export default Blog
+        <BlogCollab />
+        <div className="-mb-10 border-b-0 w-full">
+          <Footer />
+        </div>
+      </div>
+    </main>
+  );
+};
+
+export default Blog;
