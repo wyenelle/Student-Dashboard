@@ -44,9 +44,9 @@ const Header = () => {
     if(hour < 12){
         greetings = 'Good Morning'
     }
-    else if(hour > 12){
+    else if(hour > 12 && hour < 17){
     greetings = 'Good Afternoon'
-    }else if ( hour > 17){
+    }else if ( hour >= 17 && hour < 20){
         greetings = 'Good Evening'
     }else{
         greetings = 'Good night'

@@ -1,0 +1,47 @@
+.task{
+    background:rgba(149, 20, 230,0.6) ;
+    background-size: 100% 100%;
+}
+#email::placeholder{
+    color: white;
+    transition: all 1s;
+}
+#email:focus::placeholder{
+    transform: translateY(-10px);
+     opacity: 0;
+}
+#password::placeholder{
+    color:white;
+    transition : all 1s;
+}
+#password:focus::placeholder{
+    transform: translateY(-10px);
+     opacity: 0;
+}
+.button{
+    transform: scale(1);
+    transition: all .5s;
+
+}
+.button:hover{
+    border:1px solid ;
+    transform: scale(1.1);
+    background: inherit;
+
+}
+
+.btn-over{
+    overflow: hidden;
+}
+@media screen and (min-width: 600px){
+.task{
+background-color: white;
+}
+#password::placeholder{
+        color: black;
+}
+#email::placeholder{
+        color: black;
+}
+
+}

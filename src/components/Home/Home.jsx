@@ -1,10 +1,11 @@
 import React from "react";
 import "./Home.css";
-import UserInfo from "../user-info/UserInfo";
+import UserInfo from "./user-info/UserInfo";
 import { useState } from "react";
-import Navbar from "../Navbar/Navbar";
-import RightSide from "../RightSide/RightSide";
-import Main from "../Main/Main";
+import Navbar from "./Navbar/Navbar";
+import RightSide from "./RightSide/RightSide";
+import Main from "./Main/Main";
+import {slider} from './RightSide/right_side_data'
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <main className="border-2 border-red-800 h-full w-full">
+    <main className="border-8 home-bg border-red-800 h-full w-full">
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       <div className="grid grid-cols-1 md:grid-cols-5 w-11/12 mx-auto home border-2 border-gray rounded rounded-md-200 dark:bg-gray-800 ">
@@ -31,7 +32,7 @@ const Home = () => {
         </div>
 
         <div className=" hidden md:block md:col-span-1 text-center border border-slate-300/40">
-          <RightSide />
+          <RightSide slider={slider} />
         </div>
       </div>
     </main>

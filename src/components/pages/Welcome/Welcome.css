@@ -1,0 +1,16 @@
+.welcome{
+    background: url('./alt-bg.jpg');
+    background-size: 100% 100% ;
+}
+.section-1{
+    background: url('./alt-bg.jpg');
+    background-size: 100% 100% ;
+    color: white;
+}
+.section-bg{
+background-color: rgba(149, 20, 230,0.6) ;
+background-size: 100% 100%;
+}
+.connect-btn{
+transition: all .5s;
+}
