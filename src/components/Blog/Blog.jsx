@@ -6,7 +6,7 @@ import BlogCollab from "./BlogCollab";
 import BlogHeader from "./BlogHeader";
 import BlogSchool from "./BlogSchool";
 import BlogNavbar from './BlogNavBar'
-
+import './Blog.css'
 
 const Blog = () => {
   return (
