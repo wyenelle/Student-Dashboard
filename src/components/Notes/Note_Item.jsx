@@ -8,11 +8,11 @@ const Note_Item = ({item,id}) => {
     return (
     <section  className='flex justify-center items-center'>
     <h2 onClick={ () => openNote(id,item)}
-      className={`w-full text-start h-full dark:text-white dark:border-gray-200  cursor-pointer  truncate ... px-2  py-1 mb-3 `}
+      className={`w-full text-start h-full dark:text-white h-full dark:border-gray-200  cursor-pointer  truncate ... px-2  py-1 mb-3 `}
     >
       {item}
     </h2>
-   <FaTrashAlt size={20} onClick={() => deleteNote(item)} />
+   <FaTrashAlt size={20} color='red' className='cursor-pointer' onClick={() => deleteNote(item)} />
     </section>
   );
 };

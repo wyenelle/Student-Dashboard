@@ -5,13 +5,13 @@ import {FaMoon,FaSun} from 'react-icons/fa'
 const Navbar = ({darkMode,toggleDarkMode}) => {
 
   return (
-   <div className="flex w-11/12 justify-between text-white dark:bg-gray-800 dark:text-white align-center mx-auto py-3 items-center my-0 px-4">
+   <div className="flex w-full justify-between dark:bg-gray-800 dark:text-white text-black align-center mx-auto py-3 items-center my-0 px-4">
      <div className="school-name flex flex-col">
      <div className="alt">
         <h1 className='font-extrabold text-4xl'>Alt ____</h1>
         
      </div>
-     <h2 className="font-bold text-white text-4xl tracking-wider"> School</h2>
+     <h2 className="font-bold  text-4xl tracking-wider"> School</h2>
      </div>
 
       <div className="flex justify-between gap-4 align-center">

@@ -11,7 +11,7 @@ const Info = ({list,icons}) => {
 
 
   return (
-    <div className='grid grid-cols-4 gap-4 my-4 text-start my-5' data-aos='zoom-in' data-aos-once='true'>
+    <div className='grid grid-cols-4 gap-4 my-4 text-start my-5' data-aos='zoom-in' data-aos-once='false'>
         <p>{icons}</p>
         <h2 className=' col-span-3 text-start'>{list}</h2>
     </div>

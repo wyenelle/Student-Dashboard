@@ -31,8 +31,8 @@ const BlogHeader = () => {
           </button>
         </header>
       </div>
-        <div className="w-full col-span-1 border-4 hidden md:block ">
-          <div className="grid grid-cols-2 h-g border-4">
+        <div className="w-full col-span-1  hidden h-full md:block ">
+          <div className="grid grid-cols-2  h-80 mt-20">
             <div className="col-span-1  w-full h-60 rounded header-1"></div>
             <div className="col-span-1  w-full h-60 rounded header-2 "></div>
             <div className="col-span-1  w-full h-60 rounded header-3"></div>
