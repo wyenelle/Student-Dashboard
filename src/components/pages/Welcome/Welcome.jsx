@@ -31,13 +31,13 @@ const Welcome = () => {
                         See What's Happening...
                     </div>
                   <div className="connect mt-6 flex justify-around">
-                    <div className="connect-btn border border-blue-800 hover:bg-inherit hover:border-white flex justify-center items-center gap-2  bg-blue-800   rounded-full p-4 font-bold">
-                        <FaFacebook />    Facebook
-                    </div>
+                    <a href='https://www.linkedin.com/company/the-alt-school/?originalSubdomain=in' className="connect-btn border border-blue-800 hover:bg-inherit hover:border-white flex justify-center items-center gap-2  bg-blue-800   rounded-full p-4 font-bold">
+                        <FaFacebook />    LinkedIn
+                    </a>
 
-                    <div className="connect-btn border border-blue-300 hover:bg-inherit hover:border-white bg-blue-300 flex justify-center items-center gap-2   rounded-full p-4 font-bold">
+                    <a href='https://twitter.com/AltSchoolAfrica' className="connect-btn border border-blue-300 hover:bg-inherit hover:border-white bg-blue-300 flex justify-center items-center gap-2   rounded-full p-4 font-bold">
                         <FaTwitter />    Connect on Twitter
-                    </div>
+                    </a>
                   </div>
           </div>
       </div>

@@ -6,6 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import RightSide from "./RightSide/RightSide";
 import Main from "./Main/Main";
 import {slider} from './RightSide/right_side_data'
+import Footer from "./Footer";
 
 const Home = ({student_id}) => {
   const [darkMode, setDarkMode] = useState(false);
@@ -35,6 +36,7 @@ const Home = ({student_id}) => {
           <RightSide slider={slider} />
         </div>
       </div>
+<Footer/>
     </main>
   );
 };

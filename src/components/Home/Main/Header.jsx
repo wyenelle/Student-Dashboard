@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect,useState } from 'react'
 import AOS from 'aos'
 import { useNavigate } from 'react-router-dom'
 import 'aos/dist/aos.css'
@@ -16,6 +16,7 @@ const Header = () => {
     const month_date = date.getDate()
     const day = date.getDay()
     let result = ''
+    const [showPing,setShowPing] = useState(true)
     let greetings = ''
     // determine the day of the week 
     switch (day) {
@@ -59,15 +60,16 @@ const Header = () => {
 
     const navigate = useNavigate()
 
-    const go_to_news = () => (
+    const go_to_news = () => {
         navigate('/news')
-    )
+        console.log(showPing)
+    }
 useEffect(()=>{
     AOS.init()
 },[])
 
   return (
-    <header className=' text-start p-3 flex justify-between' data-aos='zoom-in' data-aos-once='true' data-aos-delay='100' data-aos-duration='600'>
+    <header id='header' className=' text-start p-3 flex justify-between' data-aos='zoom-in' data-aos-once='true' data-aos-delay='100' data-aos-duration='600'>
         <div className="header-main">
         <h1 className='text-3xl md:text-3xl font-bold dark:text-gray-300'>{greetings}, Favour!! </h1>
         <p className='text-gray-400 font-bold italic'> {`${month_date}, ${result}  ${list_of_month[month]}`}</p>
@@ -75,7 +77,10 @@ useEffect(()=>{
 
         <div className="notification-bar  flex justify-between gap-3 flex=reverse">
              <span className='flex  '>
-<span className="animate-ping  absolute right-16 top-3 inline-flex h-5 w-5 rounded-md bg-sky-400 opacity-75 dark:opacity-100"></span>
+<span className={`${showPing ? (
+    'animate-ping  absolute right-16 top-3 inline-flex h-5 w-5 rounded-md bg-sky-400 opacity-75 dark:opacity-100'
+) : 'hidden'
+}`}></span>
 <BiTrendingUp onClick={go_to_news} size={30}  className='relative text-gray-400 dark:text-cyan-500'/>
 <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span> 
             </span>
@@ -87,5 +92,3 @@ useEffect(()=>{
 }
 
 export default Header
-
-// yusufabassi1235
