@@ -12,7 +12,7 @@ navigate('/confirmation')
 )
   return (
     <div>
-        <h1 className='text-3xl font-bold text-center my-5 '>
+        <h1 className='text-3xl font-bold text-center my-5 px-2 '>
             Provide the e-mail used in registration and the associated Student ID
         </h1>
         <form className='flex flex-col justify-center items-center gap-4 '>

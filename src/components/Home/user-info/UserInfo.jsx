@@ -33,7 +33,7 @@ const icons = [
         <div className="section-list dark:text-gray-300" data-aos='zoom-in'>
           <img src={Reader} alt='reader'  height={100} className="max-w-full rounded-md transition-shadow ease-in-out duration-300 shadow none hover:shadow-xl mb-4" />
 
-              <h1 className='text-1xl'>Favour Timothy</h1>
+              <h1 className='text-xl font-extrabold'>Favour Timothy</h1>
 
             <div className="performance grid grid-cols-2 gap-1 my-5">
                <div className="star border bg-gray-800 dark:bg-gray-200  dark:border-2 h-40 col-span-1 rounded md " data-aos='fade-right' data-aos-delay='400' data-aos-duration='600'>

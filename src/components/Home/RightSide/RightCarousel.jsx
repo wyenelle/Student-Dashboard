@@ -10,7 +10,7 @@ const reducer = (slider, action) => {
   }
 };
 
-const items = ["carousel-1", "carousel-2", "carousel-3"];
+const items = ["Sponsor 1", "Sponsor 2", "Sponsor 3"];
 const count = 0;
 
 
@@ -30,11 +30,20 @@ const RightCarousel = () => {
       clearInterval(interval);
     };
   }, []);
-
+//  sudo
+// onepipe
+// RelianceHmo
+// piggvest
+// Riby
+// Aws
+// engage green
+// mono
+// norebase
   return (
     <div className="w-full">
-      <div className=" w-full ">
-        <div className="img  h-60 w-full">{items[slider]}</div>
+      <h1 className="font-bold mb-2 text-xl">Partners</h1>
+      <div className=" w-full border-4 ">
+        <div className="img  h-60 w-full flex items-center justify-center">{items[slider]}</div>
       </div>
     </div>
   );

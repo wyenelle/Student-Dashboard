@@ -1,4 +1,6 @@
-.motivation{
-    background: url('./bg-code.jpg');
-    background-size: 100% 100%;
+.motivation-bg{
+    background: url('../../../assets/article-student.jpeg');
+    background-size: cover;
+    background-position: center;
+
 }

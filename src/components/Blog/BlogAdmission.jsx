@@ -3,7 +3,7 @@ import React from "react";
 const BlogAdmission = () => {
   return (
     <div>
-      <div className="flex snap-x snap-mandatory h-40 overflow-scroll w-full bg-black    mx-auto border border-black">
+      <div className="flex snap-x snap-mandatory h-60 overflow-scroll w-full bg-black    mx-auto border border-black">
         {/* <div className="snap-center border border-black w-4/5 shrink-0 text-3xl p-4 flex justify-center items-center font-bold text-white">
                 How The Admission Works
             </div> */}

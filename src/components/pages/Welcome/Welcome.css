@@ -1,15 +1,16 @@
 .welcome{
     background: url('./alt-bg.jpg');
-    background-size: 100% 100% ;
+    background-size:  cover ;
+background-position: center;
 }
 .section-1{
     background: url('./alt-bg.jpg');
-    background-size: 100% 100% ;
+    background-size:  cover ;
     color: white;
 }
 .section-bg{
 background-color: rgba(149, 20, 230,0.6) ;
-background-size: 100% 100%;
+background-size: cover;
 }
 .connect-btn{
 transition: all .5s;

@@ -1,5 +1,10 @@
 export const slider = [
-    {title : 'first item',desc : 'lorem'},
-    {title : 'second item',desc : 'lorem ipsum'},
-    {title : 'third item',desc : 'lorem ipsum'}
-]
+  { name: "first item", img: "lorem" ,id:0},
+  { name: "second item", img: "lorem ipsum", id: 1 },
+  { name: "third item", img: "lorem ipsum", id: 2 },
+  { name: "third item", img: "lorem ipsum", id: 3 },
+  { name: "third item", img: "lorem ipsum", id: 4 },
+  { name: "third item", img: "lorem ipsum", id: 5 },
+  { name: "third item", img: "lorem ipsum", id: 6 },
+  { name: "third item", img: "lorem ipsum", id: 7 },
+];

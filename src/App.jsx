@@ -17,7 +17,6 @@ function App() {
 
   // Additional features to be added
 
-  // creed 11
   //  dding touch interactivity to website
   // API for getting news headings on a page's section === 6674f85c9d3340868df7433236e92beb
   // Pictures section that links to lms vidoes

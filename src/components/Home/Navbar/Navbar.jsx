@@ -17,10 +17,10 @@ const Navbar = ({darkMode,toggleDarkMode}) => {
       <div className="flex justify-between gap-4 align-center">
 
       <button className='md:hidden' onClick={toggleDarkMode}>{
-        darkMode ? <FaSun size={30} /> : <FaMoon size={30} className='animate-bounce text-yellow-400' />
+        darkMode ? <FaSun size={30} /> : <FaMoon size={30} className=' text-yellow-400' />
       }</button>
 
-      <Link to='/login' className='border-2 font-bold text-red-500 border-red-500 p-1 w-24 text-center rounded-md shadow-md'> 
+      <Link to='/login' className='border-2 font-bold hidden sm:block text-red-500 border-red-500 p-1 w-24 text-center rounded-md shadow-md'> 
       Logout</Link>
    </div>
 </div>
