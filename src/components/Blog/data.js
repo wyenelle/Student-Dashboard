@@ -13,5 +13,10 @@ export const  testimonies = [
         name: 'Ebuka',
         msg: 'In one year, i learnt more than i would have outside AltSchool',
         id:3
+    },
+    {
+        name: 'Deetechy',
+        msg: 'In one year, i learnt more than i would have outside AltSchool',
+        id:4
     }
 ]

@@ -6,10 +6,10 @@ import NoteDetails from "../context/context";
 
 let count = 1;
 const Note = () => {
-  const { noteData, setShowModal, noteReady } = useContext(NoteDetails);
+  const { note,dispatch, } = useContext(NoteDetails);
 
   const addToNote = () => {
-    setShowModal(true);
+    dispatch({type: 'show-modal'})
   };
 
   return (
@@ -29,8 +29,8 @@ const Note = () => {
         </div>
 
         <div className="h-60 overflow-scroll py-3 ">
-          {noteReady
-            ? noteData.listOfNotes.map((item, id) => (
+          {note.noteReady
+            ? note.listOfNotes.map((item, id) => (
                 <div
                   key={id}
                   className="mt-3 w-full grid grid-cols-5 border dark:border-0 shadow-md "
@@ -38,7 +38,6 @@ const Note = () => {
                   <div className="col-span-4 border-2 border-black">
                     <Note_Item key={id} item={item} id={id} />
                   </div>
-                  {noteData.date}
                 </div>
               ))
             : ""}

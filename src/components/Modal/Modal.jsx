@@ -1,41 +1,14 @@
 import { useEffect } from "react";
-import { useReducer } from "react";
+import { useContext } from "react";
 import { FaRegWindowClose, FaTrash } from "react-icons/fa";
 import "./Modal.css";
-
+import NoteDetails from "../context/context";
 // REDUCER
-const reducer = (note, action) => {
-  switch (action.type) {
-    case "notes":
-      return { ...note, notes: action.payload };
-    case "add":
-      return {
-        ...note,
-        notes: action.clear,
-        listOfNotes: [...note.listOfNotes, action.payload],
-        noteAdded: true,
-      };
-      case 'delete':
-        return {
-          ...note,
-          listOfNotes: action.payload
-        };
-        case 'tapped':
-          return {...note, notes: action.payload}
-    default:
-      throw new Error("No such action");
-  }
-};
 
 //  STATE OBJECT
-const state = {
-  notes: "",
-  listOfNotes: ['hello','welcome to altschool'],
-  noteAdded: false,
-  date: new Date().toLocaleDateString()
-};
-const Modal = ({ setNoteData, setNoteReady, setShowModal, textNote, tapped }) => {
-  const [note, dispatch] = useReducer(reducer, state);
+
+const Modal = () => {
+  const {note, dispatch } = useContext(NoteDetails);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,21 +17,13 @@ const Modal = ({ setNoteData, setNoteReady, setShowModal, textNote, tapped }) =>
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: "add", payload: note.notes, clear: "" });
-
-    setNoteReady(true);
+    dispatch({ type: "add", payload:note.notes, clear: "" });
   };
 
-  const deleteNote = (id) => {
-    dispatch( {type:'delete', payload: {...note, listOfNotes: note.listOfNotes.filter(item => item !== id)   }})
-};
-  
-const handleTapOnNote = () => {
-  tapped && dispatch({type: 'tapped', payload: textNote})
-}
-  useEffect(() => {
-    setNoteData(note);
-  }, [note]);
+  // useEffect(() => {
+  //   console.log(note.listOfNotes)
+
+  // },[note])
 
   return (
     <section className="border-4 border-black modal">
@@ -70,7 +35,7 @@ const handleTapOnNote = () => {
             <FaRegWindowClose
               size={40}
               className="text-red-500"
-              onClick={() => setShowModal(false)}
+              onClick={ () => dispatch({type: 'close-modal'})}
             />
           </div>
           <textarea
@@ -91,7 +56,7 @@ const handleTapOnNote = () => {
         </form>
       </div>
     </section>
-  );
+  )
 };
 
 export default Modal;

@@ -3,7 +3,7 @@ import './Note_Item.css'
 import { useContext } from "react";
 import NoteDetails from "../context/context";
 const Note_Item = ({item,id}) => {
-  const {openNote} = useContext(NoteDetails)
+  const {openNote,note} = useContext(NoteDetails)
     const [showParagraph,setShowParagraph] = useState(false)
 
 

@@ -12,18 +12,56 @@ import {
 } from "./pages";
 import { Modal, NoteDetails } from "./components";
 
-const hosted_link = "student-dashboard-tau.vercel.app/";
+
+const reducer = (note, action) => {
+  switch (action.type) {
+    case "notes":
+      return { ...note, notes: action.payload };
+    case "add":
+      return {
+        ...note,
+        notes: action.clear,
+        listOfNotes: [...note.listOfNotes, action.payload],
+        noteAdded: true,
+        noteReady: true
+      };
+      case 'show-modal':
+        return {...note, showModal: true}
+      case 'close-modal':
+        return {...note, showModal: false}
+      case 'delete':
+        return {
+          ...note,
+          listOfNotes: action.payload
+        };
+        case 'tapped':
+          return {...note, notes: action.payload}
+    default:
+      throw new Error("No such action");
+  }
+};
+
+
+
+const state = {
+  notes: "",
+  listOfNotes: ['hello','welcome to altschool'],
+  noteAdded: false,
+  date: new Date().toLocaleDateString(),
+  showModal: false,
+  noteReady: false
+};
+
+
 
 function App() {
+  const [note, dispatch] = useReducer(reducer, state);
+
   // set news data
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   // setuo modal with data from the modal component
-  const [showModal, setShowModal] = useState(false);
-  const [noteData, setNoteData] = useState("");
-  const [noteReady, setNoteReady] = useState(false);
-  const [removeNote,setRemoveNote] = useState(false)
   const [textNote, setTextNote] = useState()
   const [tapped, setTapped] = useState(false)
 
@@ -33,10 +71,8 @@ function App() {
         setRemoveNote(true)
   };
   const openNote = (id,item) => {
-    setShowModal(true)
     setTapped(true)
     setTextNote(item)
-console.log('tapped')
   }
   // Additional features to be added
 
@@ -57,23 +93,16 @@ console.log('tapped')
   return (
     <NoteDetails.Provider
       value={{
-        noteData,
-        setNoteData,
-        showModal,
-        setShowModal,
-        noteReady,
         openNote,
+        dispatch,
+        note
         
         
       }}
     >
       <div className="App h-auto ">
-        <div className={!showModal ? `hidden` : "block h-full"}>
+        <div className={!note.showModal ? `hidden` : "block h-full"}>
           <Modal
-            setNoteData={setNoteData}
-            setNoteReady={setNoteReady}
-            setShowModal={setShowModal}
-            removeNote={removeNote}
             textNote={textNote}
             tapped={tapped}
           />

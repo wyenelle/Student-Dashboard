@@ -7,3 +7,17 @@
     background-attachment: fixed;
     
 }
+.testimonial{
+    animation: fade-gently 12s infinite;
+}
+@keyframes fade-gently{
+    0%{
+        opacity:0.3
+    }
+    10%{
+        opacity:1
+    }
+    100%{
+        opacity:1
+    }
+}
