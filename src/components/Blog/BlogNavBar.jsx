@@ -10,7 +10,8 @@ const BlogNavBar = () => {
         <h2 className="font-bold text-white text-3xl tracking-wider"> School</h2>
         </div>
         <div className="hamburger hidden md:block">
-          some text
+          <h1>Schools</h1>
+
         </div>
         <div className="nav-buttons ">
           <Link className='border border-gray-300/40 h-10 font-extrabold' to='login'>Log in</Link>

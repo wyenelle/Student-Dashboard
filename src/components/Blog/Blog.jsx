@@ -13,12 +13,12 @@ import BlogFuture from "./BlogFuture";
 
 const Blog = () => {
   return (
-    <main className="w-full h-screen ">
-      <div className="w-full">
+    <main className="w-full  ">
+      <div className="w-full flex flex-col">
         <div className="w-full ">
           <BlogNavbar />
         </div>
-        <div className="w-full">
+        <div className="w-full border-2 border-green-500">
           <BlogHeader />
         </div>
         <div className="w-full">

@@ -2,18 +2,19 @@ import React from 'react'
 import './BlogAbout.css'
 import {FaAngleDoubleRight} from 'react-icons/fa'
 const BlogAbout = () => {
-const styles = {
-  backgroundColor : '#eee'
-}
+
   return (
-    <section style={styles} className="w-full">
+    <section  className="w-full">
       <div className='w-full'>
       <div className="w-full grid grid-cols-1 md:grid-cols-2 pl-5">
-        <div className="col-span-1">
-        <h1 className=" font-extrabold text-xl">Shaping The Future Of Work</h1>
+        <div className="col-span-1 h-full">
+          <div className="flex justify-center h-full items-center">
+        <h1 className=" font-extrabold  flex items-center text-3xl h-full">Shaping The Future Of Work</h1>
+
+          </div>
         </div>
-        <div className="col-span-1">
-        <p className="my-2">
+        <div className="col-span-1 py-3 w-10/12">
+        <p className="my-2 ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores fuga id provident totam. Sit ratione dolorum provident quo tenetur quos!zz
         </p>
 

@@ -1,0 +1,11 @@
+.expand{
+    animation: come-in 1s;
+}
+@keyframes come-in{
+    0%{
+        height:0px;
+    }
+    100%{
+        height:120px;   
+    }
+}

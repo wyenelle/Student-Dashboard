@@ -9,7 +9,7 @@ const reducer = (sliderCount, action) => {
         ? (sliderCount = 0)
         : sliderCount + 1;
     default:
-      console.log("no such number");
+      throw new Error('No such Number') 
   }
 };
 
@@ -24,22 +24,13 @@ const RightCarousel = () => {
   useEffect(() => {
     interval = setInterval(() => {
       dispatch({ type: "move" });
-      console.log(sliderCount);
     }, 12000);
     // CLEANUP FUNCTION
     return () => {
       clearInterval(interval);
     };
   }, []);
-  //  sudo
-  // onepipe
-  // RelianceHmo
-  // piggvest
-  // Riby
-  // Aws
-  // engage
-  // mono
-  // norebase
+  
 
   const handleMOuseEnter = () => {
     const linkBox = document.querySelector(".link-box");
@@ -53,7 +44,7 @@ const RightCarousel = () => {
   };
   return (
     <div className="w-full">
-      <h1 className="font-bold mb-2 text-xl">Partners</h1>
+      <h1 className="font-bold mb-2 dark:text-gray-300 text-xl">Partners</h1>
       <div
         onMouseEnter={handleMOuseEnter}
         onMouseLeave={handleMouseLeave}
