@@ -1,10 +1,11 @@
 import { useEffect, useReducer } from "react";
 import "./RightCarousel.css";
+import {slider} from './right_side_data'
 
-const reducer = (slider, action) => {
+const reducer = (sliderCount, action) => {
   switch (action.type) {
     case "move":
-      return slider == items.length - 1 ? (slider = 0) : slider + 1;
+      return sliderCount == items.length - 1 ? (sliderCount = 0) : sliderCount + 1;
     default:
       console.log("no such number");
   }
@@ -15,7 +16,7 @@ const count = 0;
 
 
 const RightCarousel = () => {
-  const [slider, dispatch] = useReducer(reducer, count);
+  const [sliderCount, dispatch] = useReducer(reducer, count);
   const carousels = document.getElementsByClassName("img");
   let interval = "";
 
@@ -23,7 +24,7 @@ const RightCarousel = () => {
   useEffect(() => {
     interval = setInterval(() => {
       dispatch({ type: "move" });
-      console.log(slider);
+      console.log(sliderCount);
     }, 12000);
 // CLEANUP FUNCTION
     return () => {
@@ -39,11 +40,27 @@ const RightCarousel = () => {
 // engage green
 // mono
 // norebase
+const handleMOuseEnter = () => {
+  const linkBox = document.querySelector('.link-box')
+  linkBox.classList.add('absolute')
+  linkBox.classList.remove('hidden')
+}
+const handleMouseLeave = () => {
+  const linkBox = document.querySelector('.link-box')
+  linkBox.classList.remove('absolute')
+  linkBox.classList.add('hidden')
+}
   return (
     <div className="w-full">
       <h1 className="font-bold mb-2 text-xl">Partners</h1>
-      <div className=" w-full border-4 ">
-        <div className="img  h-60 w-full flex items-center justify-center">{items[slider]}</div>
+      <div onMouseEnter={handleMOuseEnter} onMouseLeave={handleMouseLeave} className=" w-full  relative carousel-box ">
+        <div className="img  h-60 w-full flex items-center justify-center">
+          <img src='' alt='photo' className="w-full h-full" />
+          <div className=" bg-black/50 link-box hidden top-0 h-full w-full flex flex-col items-center justify-center"> 
+          <p>{ slider[sliderCount].name }</p>
+          <a href={ slider[sliderCount].link } className='font-bold text-white'> Visit</a>
+          </div>
+        </div>
       </div>
     </div>
   );

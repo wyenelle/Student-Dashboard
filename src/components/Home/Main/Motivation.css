@@ -1,6 +1,14 @@
 .motivation-bg{
     background: url('../../../assets/article-student.jpeg');
     background-size: cover;
+    overflow:hidden;
     background-position: center;
 
+}
+.motivation-text{
+    transform: scale(1);
+    transition: all 2s ease;
+}
+.motivation-text:hover{
+    transform: scale(1.1);
 }
