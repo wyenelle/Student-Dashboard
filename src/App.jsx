@@ -21,7 +21,6 @@ function App() {
   // API for getting news headings on a page's section === 6674f85c9d3340868df7433236e92beb
   // Pictures section that links to lms vidoes
   // Teachers
-  // Adding Videos
   // Todo list
   //  Resources
   // Day n of semester so far

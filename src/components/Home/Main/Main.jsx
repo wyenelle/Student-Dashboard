@@ -3,6 +3,7 @@ import Header from './Header'
 import FirstArticle from './FirstArticle'
 import SecondArticle from './SecondArticle'
 import Motivation from './Motivation'
+import Video from '../../Videos/Video'
 
 
 const Main = ({student_id}) => {
@@ -25,6 +26,9 @@ const Main = ({student_id}) => {
                 <SecondArticle  />
             </div>
 
+            <div className="col-span-2 md:col-span-2 mt-7 ">
+                <Video  />
+            </div>
            
         </div>
         
