@@ -14,7 +14,7 @@ const BlogNavBar = () => {
 
         </div>
         <div className="nav-buttons ">
-          <Link className='border border-gray-300/40 h-10 font-extrabold' to='login'>Log in</Link>
+          <Link className='border border-gray-300/40 h-10 font-extrabold' to='/login'>Log in</Link>
         </div>
       </div>
     </nav>

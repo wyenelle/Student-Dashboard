@@ -10,7 +10,7 @@ import {FaStar} from 'react-icons/fa'
 
 const UserInfo = ({toggleDarkMode,darkMode}) => {
   const news = <Link to='/news'> news </Link>
-  const blog = <Link to='/'> Blog </Link>
+  const blog = <Link to='/blog'> Blog </Link>
 const list = [
 blog,
 news,

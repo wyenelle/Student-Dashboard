@@ -9,6 +9,7 @@ const BlogAdmission = () => {
           <h1 className="number text-gray-300/60 text-2xl font-extrabold pl-3">
           How The Admission Process Works
           <FaAngleDoubleRight size={30} className='arrow-right my-4' />
+          Swipe Left
           </h1>
         </div>
 

@@ -1,5 +1,5 @@
 .header{
-background: #fff;
+background: white;
 }
 .header-1{
     background: url('../../assets/images-1.png');
@@ -17,4 +17,7 @@ background: #fff;
 .header-4{
     background: url('../../assets/images-4.png');
     background-size: 100% 100%;
+}
+.h-g{
+    margin-top:3rem;
 }

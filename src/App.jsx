@@ -11,6 +11,7 @@ import {
   Home,
 } from "./pages";
 import { Modal, NoteDetails } from "./components";
+import FrontPage from "./pages/Front Page/frontPage";
 
 
 const reducer = (note, action) => {
@@ -55,10 +56,7 @@ const state = {
   noteReady: false
 };
 
-//future - - - button h and text should start
-//  font
-//  school -- enroll should be bolder and bigger
-// admission sm -- padding right for last item
+
 // objective header bolder and maybe a bg
 
 function App() {
@@ -115,7 +113,8 @@ function App() {
           />
         </div>
         <Routes>
-          <Route path="/" element={<Blog />} />
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/home" element={<Home />} />
           <Route path="/new_pwd" element={<ForgotPassword />} />
           <Route path="/confirmation" element={<Confirmation />} />

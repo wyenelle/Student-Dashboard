@@ -1,0 +1,9 @@
+.article{
+    transform: scale(1);
+    transition: all 1s ease;
+}
+.article:hover{
+    transform: scale(0.97);
+    color: blue;
+    border: 1px solid blue;
+}
