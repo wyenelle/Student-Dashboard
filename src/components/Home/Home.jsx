@@ -16,10 +16,10 @@ const Home = () => {
   };
 
   return (
-    <main className="border-8 home-bg border-red-800 h-full w-full">
+    <main className=" home-bg h-full w-full">
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
-      <div className="grid grid-cols-1 md:grid-cols-5 w-11/12 mx-auto home border-2 border-gray rounded rounded-md-200 dark:bg-gray-800 ">
+      <div className="grid grid-cols-1 md:grid-cols-5 w-11/12 mx-auto home bg-white border-2 border-gray rounded rounded-md-200 dark:bg-gray-800 ">
         <div className=" hidden md:col-span-1 sm:block  border border-slate-300/40  text-center p-4">
           <UserInfo toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
         </div>

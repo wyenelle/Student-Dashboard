@@ -4,12 +4,15 @@ import {Link, } from 'react-router-dom'
 const Navbar = ({darkMode,toggleDarkMode}) => {
 
   return (
-   <div className="flex w-11/12 justify-between dark:bg-gray-800 dark:text-white align-center mx-auto py-3 items-center my-0 px-4">
-     <h2>AltSchool</h2>
+   <div className="flex w-11/12 justify-between text-white dark:bg-gray-800 dark:text-white align-center mx-auto py-3 items-center my-0 px-4">
+     <div className="school-name w-1/4">
+     <h2 className='text-4xl font-bold text-white '>Alt ____  </h2>
+     <h2 className="font-bold text-white text-4xl"> School</h2>
+     </div>
 
       <div className="flex justify-between gap-4 align-center">
 
-      <button className='' onClick={toggleDarkMode}>{
+      <button className='md:hidden' onClick={toggleDarkMode}>{
         darkMode ? 'Day' : 'Night'
       }</button>
 

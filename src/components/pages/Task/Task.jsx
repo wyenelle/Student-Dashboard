@@ -26,7 +26,7 @@ const Task = () => {
   return (
     <div className="task md:bg-none  w-full md:w-10/12 md:mx-auto rounded-md backdrop-blur-sm h-full   ">
       <div className="form w-full">
-        <h1 className="w-11/12 md:hidden mx-auto text-3xl md:text-black font-bold mt-3 md:mt-0 mb-9 pt-4">
+        <h1 className="w-11/12 md:hidden text-white mx-auto text-3xl md:text-black font-bold mt-3 md:mt-0 mb-9 pt-4">
           {" "}
           Welcome Back
         </h1>
@@ -79,7 +79,7 @@ const Task = () => {
             </Link>
           </div>
           
-            <div className="btn-over mx-auto  w-11/12">
+            <div className="btn-over mx-auto my-6  w-11/12">
             <div onClick={go_home}  className=" w-10/12 button mx-auto bg-black mx-auto text-white text-center p-4 rounded-md font-bold my-3">
                 Button
                </div>

@@ -3,3 +3,9 @@
 
     
 }
+.home-bg{
+background: url('../altschool.png');
+background-position: TOP 50PX ;
+background-size: COVER;
+background-repeat: no-repeat;
+}
