@@ -5,12 +5,12 @@ import SecondArticle from './SecondArticle'
 import Motivation from './Motivation'
 
 
-const Main = () => {
+const Main = ({student_id}) => {
   return (
     <main >
         <div className="grid grid-cols-2 dark:text-white">
             <div className="col-span-2">
-                <Header />
+                <Header student_id={student_id} />
             </div>
 
             <div className="col-span-2 md:col-span-1 ">

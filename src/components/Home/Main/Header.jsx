@@ -4,7 +4,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {BiTrendingUp} from 'react-icons/bi'
 import {VscBellDot} from 'react-icons/vsc'
-import {FaStarHalfAlt,FaClock,FaMoon,FaSun,FaBell,} from 'react-icons/fa'
+import {FaStarHalfAlt,FaClock,FaBell,} from 'react-icons/fa'
 
 
 const Header = () => {
@@ -62,18 +62,18 @@ useEffect(()=>{
   return (
     <header className=' text-start p-3 flex justify-between' data-aos='zoom-in' data-aos-once='true' data-aos-delay='100' data-aos-duration='600'>
         <div className="header-main">
-        <h1 className='text-2xl md:text-3xl font-extrabold'>{greetings}, Favour!! </h1>
+        <h1 className='text-3xl md:text-3xl font-bold dark:text-gray-300'>{greetings}, Favour!! </h1>
         <p className='text-gray-400 font-bold italic'> {`${month_date}, ${result}  ${list_of_month[month]}`}</p>
         </div>
 
-        <div className="notification-bar flex justify-between gap-3 flex=reverse">
-             <span className='flex border-2 '>
+        <div className="notification-bar  flex justify-between gap-3 flex=reverse">
+             <span className='flex  '>
 <span className="animate-ping  absolute right-16 top-3 inline-flex h-5 w-5 rounded-md bg-sky-400 opacity-75 dark:opacity-100"></span>
-<BiTrendingUp size={40}  className='relative text-gray-400 dark:text-cyan-500'/>
+<BiTrendingUp size={30}  className='relative text-gray-400 dark:text-cyan-500'/>
 <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span> 
             </span>
 
-            <VscBellDot size={40} className='relative text-gray-400 dark:text-cyan-500'/>
+            <VscBellDot size={30} className='relative text-gray-400 dark:text-cyan-500'/>
         </div>
     </header>
   )

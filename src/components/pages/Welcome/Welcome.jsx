@@ -9,7 +9,6 @@ const Welcome = () => {
   useEffect(()=>{    
     AOS.init()
     let attr = document.querySelector('#ov')
-    console.log(attr);
 
     return () => {
       attr.removeAttribute('data-aos')

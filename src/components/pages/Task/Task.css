@@ -43,5 +43,12 @@ background-color: white;
 #email::placeholder{
         color: black;
 }
+.button:hover{
+    border:1px solid black ;
+    transform: scale(1.1);
+    background: inherit;
+    color: black;
+
+}
 
 }

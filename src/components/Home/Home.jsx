@@ -7,7 +7,7 @@ import RightSide from "./RightSide/RightSide";
 import Main from "./Main/Main";
 import {slider} from './RightSide/right_side_data'
 
-const Home = () => {
+const Home = ({student_id}) => {
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
@@ -17,18 +17,18 @@ const Home = () => {
 
   return (
     <main className=" home-bg h-full w-full">
-      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Navbar darkMode={darkMode}  toggleDarkMode={toggleDarkMode} />
 
-      <div className="grid grid-cols-1 md:grid-cols-5 w-11/12 mx-auto home bg-white border-2 border-gray rounded rounded-md-200 dark:bg-gray-800 ">
+      <div className="grid grid-cols-1 md:grid-cols-5 w-full  md:w-11/12 mx-auto home bg-white border border-gray-400/30  rounded rounded-md-200 dark:bg-gray-800 ">
         <div className=" hidden md:col-span-1 sm:block  border border-slate-300/40  text-center p-4">
           <UserInfo toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
         </div>
 
         <div
-          className={` md:col-span-3 text-center border border-slate-300/40`}
+          className={` px-3 md:col-span-3 text-center `}
         >
 
-          <Main />
+          <Main student_id={student_id} />
         </div>
 
         <div className=" hidden md:block md:col-span-1 text-center border border-slate-300/40">
