@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 import School from './School'
+import './BlogSchool.css'
+
 const BlogSchool = () => {
-const [schools,setSchools] = useState([
+const [schools] = useState([
         {
             id : 1,
             name : 'School Of Engineering',
@@ -24,9 +26,12 @@ const [schools,setSchools] = useState([
 ])
   return (
     <div>
+        <div className="w-full blog-school grid grid-cols-1 md:grid-cols-3 border border-black">
         {
             schools.map(school => <School key={school.id} school={school} />)
         }
+        </div>
+        
     </div>
   )
 }

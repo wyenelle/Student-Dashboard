@@ -3,12 +3,16 @@ import Footer from "../Home/Footer";
 import BlogAdmission from "./BlogAdmission";
 import BlogAdmissionLg from "./BlogAdmissionLg";
 import BlogCollab from "./BlogCollab";
+import BlogHeader from "./BlogHeader";
 import BlogSchool from "./BlogSchool";
 
 const Blog = () => {
   return (
     <main className="w-full h-screen ">
       <div className="w-full">
+        <div className="w-full">
+          <BlogHeader />
+        </div>
         <div className="w-full">
           <BlogSchool />
         </div>

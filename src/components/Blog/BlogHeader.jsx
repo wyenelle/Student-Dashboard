@@ -1,8 +1,45 @@
 import React from 'react'
+import './BlogHeader.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+import BlogNavbar from './BlogNavBar'
 
 const BlogHeader = () => {
+useEffect(()=>{
+AOS.init()
+},[])
+
   return (
-    <div>BlogHeader</div>
+    <section className='w-full h-screen' >
+<BlogNavbar />
+      <div className='flex  h-screen justify-center items-center '>
+              
+      <header data-aos='zoom-in' data-aos-delay='400' data-aos-duration='700' className='p-4  w-full flex flex-col justify-evenly  h-4/5   '>
+<h1 className='text-6xl md:text-6xl font-bold w-3/5'>
+Learn highly sought after tech skills 
+</h1>
+<button className='my-2 w-3/5 md:font-extrabold font-bold border shadow-md p-3 rounded'>Begin the journey</button>
+      </header>
+      <div className='w-full hidden md:block '>
+        <div className="grid grid-cols-2">
+          <div className="col-span-1  w-full h-60 rounded header-1">
+            
+          </div>
+          <div className="col-span-1  w-full h-60 rounded header-2">
+            
+          </div>
+          <div className="col-span-1  w-full h-60 rounded header-3">
+            
+          </div>
+          <div className="col-span-1  w-full h-60 rounded header-4">
+            
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
   )
 }
 
