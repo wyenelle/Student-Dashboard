@@ -5,5 +5,6 @@
 .article:hover{
     transform: scale(0.97);
     color: blue;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    /* background-color: #eee; */
 }
