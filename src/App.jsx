@@ -11,6 +11,7 @@ import Confirmation from './components/pages/Confirmation'
 function App() {
   const [news,setNews] = useState()
  const [loading,setIsLoading] = useState(false)
+ const hosted_link = 'student-dashboard-tau.vercel.app/'
 
   // Additional features to be added 
 
