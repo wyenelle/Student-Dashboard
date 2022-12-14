@@ -15,10 +15,10 @@ const Blog = () => {
   return (
     <main className="w-full  ">
       <div className="w-full flex flex-col">
-        <div className="w-full ">
+        <div className="w-full mb-5 md:mb-0 ">
           <BlogNavbar />
         </div>
-        <div className="w-full border-2 border-green-500">
+        <div className="w-full mt-5 md:mt-0">
           <BlogHeader />
         </div>
         <div className="w-full">

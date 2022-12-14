@@ -6,6 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import RightSide from "./RightSide/RightSide";
 import Main from "./Main/Main";
 import Footer from "./Footer";
+import Modal from "../Modal/Modal";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -16,7 +17,7 @@ const Home = () => {
   };
 
   return (
-    <main className=" home-bg h-full w-full ">
+    <main className=" home-bg relative h-full w-full ">
       <Navbar darkMode={darkMode}  toggleDarkMode={toggleDarkMode} />
 
       <div className="grid grid-cols-1  md:grid-cols-5 w-full  md:w-full mx-auto home bg-white border border-gray-400/30  rounded rounded-md-200 dark:bg-gray-800 ">

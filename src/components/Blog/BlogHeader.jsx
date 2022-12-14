@@ -19,7 +19,7 @@ const BlogHeader = () => {
           data-aos="zoom-in"
           data-aos-delay="400"
           data-aos-duration="700"
-          className="p-4  w-full flex border-4 border-red-500 flex-col justify-evenly  h-full   "
+          className="p-4  w-full flex flex-col justify-evenly  h-full   "
         >
           <h1 className="text-6xl md:text-6xl font-bold w-3/5">
             Learn highly sought after tech skills
