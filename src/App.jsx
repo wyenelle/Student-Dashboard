@@ -8,8 +8,8 @@ import ForgotPassword from "./components/pages/forgot-password/Forgot-Password";
 import Confirmation from "./components/pages/Confirmation";
 
 function App() {
-  const [news, setNews] = useState();
-  const [loading, setIsLoading] = useState(false);
+  const [news, setNews] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const hosted_link = "student-dashboard-tau.vercel.app/";
   let student_id = "";
 
@@ -20,7 +20,6 @@ function App() {
     }
     return student_id;
   };
-  console.log(generate_student_id());
 
   // Additional features to be added
 
@@ -40,9 +39,9 @@ function App() {
 
   //  useEffect(()=>{
   //   setIsLoading(true)
-  //     let res = axios.get(news_api).then(response => setNews(response.data))
+  //     let res = axios.get(news_api).then(response => setNews(response.data?.articles))
   //     setIsLoading(false)
-  //     console.log(news);
+  //     !isLoading && console.log(news)
   //  },[])
 
   return (
