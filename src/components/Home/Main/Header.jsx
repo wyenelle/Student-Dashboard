@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import AOS from 'aos'
+import { useNavigate, useNavigation } from 'react-router-dom'
 import 'aos/dist/aos.css'
 import {BiTrendingUp} from 'react-icons/bi'
 import {VscBellDot} from 'react-icons/vsc'
@@ -55,6 +56,10 @@ const Header = () => {
     }else{
         greetings = 'Good night'
     }
+
+    const go_to_news = () => (
+        useNavigate('/news')
+    )
 useEffect(()=>{
     AOS.init()
 },[])
@@ -69,7 +74,7 @@ useEffect(()=>{
         <div className="notification-bar  flex justify-between gap-3 flex=reverse">
              <span className='flex  '>
 <span className="animate-ping  absolute right-16 top-3 inline-flex h-5 w-5 rounded-md bg-sky-400 opacity-75 dark:opacity-100"></span>
-<BiTrendingUp size={30}  className='relative text-gray-400 dark:text-cyan-500'/>
+<BiTrendingUp onClick={go_to_news} size={30}  className='relative text-gray-400 dark:text-cyan-500'/>
 <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span> 
             </span>
 

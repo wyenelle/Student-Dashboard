@@ -6,10 +6,11 @@ import Welcome from "./components/pages/Welcome/Welcome";
 import axios from "axios";
 import ForgotPassword from "./components/pages/forgot-password/Forgot-Password";
 import Confirmation from "./components/pages/Confirmation";
+import News from "./components/pages/News/News";
 
 function App() {
-  const [news, setNews] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [news, setNews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const hosted_link = "student-dashboard-tau.vercel.app/";
   let student_id = "";
 
@@ -32,17 +33,18 @@ function App() {
   // Adding Videos
   // Todo list
   //  Resources
+  // Day n of semester so far
   // Classes scheduler
-  // Student ID
-  const news_api =
-    "https://newsapi.org/v2/top-headlines?country=us&apiKey=6674f85c9d3340868df7433236e92beb";
 
-  //  useEffect(()=>{
-  //   setIsLoading(true)
-  //     let res = axios.get(news_api).then(response => setNews(response.data?.articles))
-  //     setIsLoading(false)
-  //     !isLoading && console.log(news)
-  //  },[])
+
+  const news_api =
+    "https://newsapi.org/v2/top-headlines?country=ng&apiKey=6674f85c9d3340868df7433236e92beb";
+
+   useEffect(()=>{
+      let res = axios.get(news_api).then(response => setNews(response.data?.articles))
+      setIsLoading(false)
+      // !isLoading && console.log(news)
+   },[])
 
   return (
     <div className="App ">
@@ -51,6 +53,8 @@ function App() {
         <Route path="/home/*" element={<Home student_id={student_id} />} />
         <Route path="/new_pwd" element={<ForgotPassword />} />
         <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/news" element={<News news={news} isLoading={isLoading} />} />
+
         <Route path="/*" element={<Confirmation />} />
       </Routes>
     </div>
