@@ -2,15 +2,16 @@ import React from 'react'
 import './UserInfo.css'
 import Info from './Info'
 import Reader from './reader.jpeg'
-
+import { Link } from 'react-router-dom'
 import {MdDashboard,MdScore,MdTask,MdNotes,MdVideoLibrary} from 'react-icons/md'
 import {BsNewspaper} from 'react-icons/bs'
 
 
 const UserInfo = ({toggleDarkMode,darkMode}) => {
+  const news = <Link to='/news'> news </Link>
 const list = [
 'Dashboard',
-'News',
+news,
 'Alt-Scores',
 'Videos',
 'Task',

@@ -25,10 +25,8 @@ function App() {
   // Additional features to be added
 
   // API for getting news headings on a page's section === 6674f85c9d3340868df7433236e92beb
-  // Adding the news feature
   // Pictures section that links to lms vidoes
   // Teachers
-  // Altschool png images for the RightSide Component
   // Footer
   // Adding Videos
   // Todo list
@@ -38,7 +36,7 @@ function App() {
 
 
   const news_api =
-    "https://newsapi.org/v2/top-headlines?country=ng&apiKey=6674f85c9d3340868df7433236e92beb";
+    "https://newsapi.org/v2/top-headlines?category=technology&country=us&pageSize=30&apiKey=6674f85c9d3340868df7433236e92beb";
 
    useEffect(()=>{
       let res = axios.get(news_api).then(response => setNews(response.data?.articles))

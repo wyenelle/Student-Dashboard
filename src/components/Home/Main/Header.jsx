@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import AOS from 'aos'
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import 'aos/dist/aos.css'
 import {BiTrendingUp} from 'react-icons/bi'
 import {VscBellDot} from 'react-icons/vsc'
@@ -57,8 +57,10 @@ const Header = () => {
         greetings = 'Good night'
     }
 
+    const navigate = useNavigate()
+
     const go_to_news = () => (
-        useNavigate('/news')
+        navigate('/news')
     )
 useEffect(()=>{
     AOS.init()
