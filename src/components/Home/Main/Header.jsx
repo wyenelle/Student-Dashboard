@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import AOS from 'aos'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link} from 'react-router-dom'
 import 'aos/dist/aos.css'
 import {BiTrendingUp} from 'react-icons/bi'
 import {VscBellDot} from 'react-icons/vsc'
@@ -72,6 +72,7 @@ useEffect(()=>{
     <header id='header' className=' text-start p-3 flex justify-between' data-aos='zoom-in' data-aos-once='true' data-aos-delay='100' data-aos-duration='600'>
         <div className="header-main">
         <h1 className='text-3xl md:text-3xl font-bold dark:text-gray-300'>{greetings}, Favour!! </h1>
+        <Link to='/blog'>blog post</Link>
         <p className='text-gray-400 font-bold italic'> {`${month_date}, ${result}  ${list_of_month[month]}`}</p>
         </div>
 
