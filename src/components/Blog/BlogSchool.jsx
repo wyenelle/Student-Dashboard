@@ -26,7 +26,7 @@ const [schools] = useState([
 ])
   return (
     <div>
-        <div className="w-full blog-school grid grid-cols-1 md:grid-cols-3 border border-black">
+        <div className="w-full blog-school grid grid-cols-1 md:grid-cols-3 border border-black p-3">
         {
             schools.map(school => <School key={school.id} school={school} />)
         }

@@ -17,3 +17,17 @@
 .admission-h1{
 
 }
+@keyframes blink{
+    0%{
+        color : white;
+    }
+    20%{
+        color: whitesmoke;
+    }
+    75%{
+        color: gray;
+    }
+    100%{
+        color:white;
+    }
+}

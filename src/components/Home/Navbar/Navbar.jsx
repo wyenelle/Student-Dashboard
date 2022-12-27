@@ -20,7 +20,7 @@ const Navbar = ({darkMode,toggleDarkMode}) => {
         darkMode ? <FaSun size={30} /> : <FaMoon size={30} className='animate-bounce text-yellow-400' />
       }</button>
 
-      <Link to='/' className='border-2 font-bold text-red-500 border-red-500 p-1 w-24 text-center rounded-md shadow-md'> 
+      <Link to='/login' className='border-2 font-bold text-red-500 border-red-500 p-1 w-24 text-center rounded-md shadow-md'> 
       Logout</Link>
    </div>
 </div>

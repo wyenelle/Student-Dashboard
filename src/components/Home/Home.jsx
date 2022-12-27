@@ -5,7 +5,6 @@ import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import RightSide from "./RightSide/RightSide";
 import Main from "./Main/Main";
-import {slider} from './RightSide/right_side_data'
 import Footer from "./Footer";
 
 const Home = ({student_id}) => {
@@ -33,7 +32,7 @@ const Home = ({student_id}) => {
         </div>
 
         <div className=" hidden md:block md:col-span-1 text-center border border-slate-300/40">
-          <RightSide slider={slider} />
+          <RightSide />
         </div>
       </div>
 <Footer/>

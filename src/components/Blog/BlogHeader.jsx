@@ -3,7 +3,6 @@ import './BlogHeader.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
-import BlogNavbar from './BlogNavBar'
 
 const BlogHeader = () => {
 useEffect(()=>{
@@ -11,9 +10,8 @@ AOS.init()
 },[])
 
   return (
-    <section className='w-full h-screen' >
-<BlogNavbar />
-      <div className='flex  h-screen justify-center items-center '>
+    <section className='w-full h-screen ' >
+      <div id='header' className='flex  h-screen justify-center items-center header '>
               
       <header data-aos='zoom-in' data-aos-delay='400' data-aos-duration='700' className='p-4  w-full flex flex-col justify-evenly  h-4/5   '>
 <h1 className='text-6xl md:text-6xl font-bold w-3/5'>

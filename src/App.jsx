@@ -40,12 +40,12 @@ function App() {
     <div className="App ">
       <Routes>
         <Route path="/" element={<Blog />} />
-        <Route path="/home/*" element={<Home   />} />
+        <Route path="/home" element={<Home   />} />
         <Route path="/new_pwd" element={<ForgotPassword />} />
         <Route path="/confirmation" element={<Confirmation />} />
         <Route path="/news" element={<News news={news} isLoading={isLoading} />} />
         <Route path="/login" element={<Welcome />} />
-        <Route path="/*" element={<Confirmation />} />
+        <Route path="*" element={<Confirmation />} />
       </Routes>
     </div>
   );

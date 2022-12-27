@@ -5,6 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import { FaFacebook, FaTwitter } from 'react-icons/fa'
+import Form from '../Task/form'
 const Welcome = () => {
   useEffect(()=>{    
     AOS.init()
@@ -14,7 +15,6 @@ const Welcome = () => {
       attr.removeAttribute('data-aos')
         attr.removeAttribute('data-aos-delay')
         attr.removeAttribute('data-aos-duration')
-        console.log('complete');
     }
   },[])
   return (
@@ -41,7 +41,7 @@ const Welcome = () => {
                   </div>
           </div>
       </div>
-
+{/* <Form/> */}
       <div className="col-span-1  h-full md:h-4/5  w-full">
         <Task />
       </div>

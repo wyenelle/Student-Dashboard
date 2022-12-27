@@ -5,11 +5,16 @@ import BlogAdmissionLg from "./BlogAdmissionLg";
 import BlogCollab from "./BlogCollab";
 import BlogHeader from "./BlogHeader";
 import BlogSchool from "./BlogSchool";
+import BlogNavbar from './BlogNavBar'
+
 
 const Blog = () => {
   return (
     <main className="w-full h-screen ">
       <div className="w-full">
+        <div className="w-full ">
+          <BlogNavbar />
+        </div>
         <div className="w-full">
           <BlogHeader />
         </div>

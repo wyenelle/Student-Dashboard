@@ -1,0 +1,8 @@
+.show{
+display:block;
+border: 1px solid red;
+visibility: visible;
+}
+.hide{
+display: none;
+}

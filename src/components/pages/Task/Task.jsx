@@ -3,26 +3,47 @@ import "./Task.css";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Task = () => {
-  const [task, setTask] = useState({
-    text: "",
-    date: "",
-    check: false,
-  });
 
-  const [signIn, setSignIn] = useState(true);
+const Task = () => {
+  const [login, setLogin] = useState({
+    email: "",
+    password: "",
+    check: false,
+    loginValid : false
+  })
+
+  const regex = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
+  let Error_msg = ''
+  const [signIn, setSignIn] = useState(false);
   const navigate = useNavigate();
+
+  const validate_form = ()=>{    
+    if( login.email.match(regex) && login.password.length >= 6)(
+        setSignIn(true)
+    )
+  }
+
   const handleClick = (e) => {
-    const { name, value } = e.target;
-    setTask({
-      ...task,
-      [name]: value,
-      check: !task.check,
-    });
+const {name,value} = e.target
+setLogin({...login,
+  [name] : value
+})
+    validate_form()
+console.log(login.password);
   };
+
+
+  const handleSubmit = (e) => {
+      e.preventDefault()
+       validate_form()
+}
+
+
   const go_home = ()=>(
     navigate('/home')
   )
+
+// useEffect()
   return (
     <div className="task md:bg-none  w-full md:w-10/12 md:mx-auto rounded-md backdrop-blur-sm h-full   ">
       <div className="form w-full">
@@ -36,29 +57,31 @@ const Task = () => {
           Login
         </h1>
 
-        <form className="flex flex-col gap-4 text-white  h-auto mt-4">
+        <form className="flex flex-col gap-4 text-white  h-auto mt-4" onSubmit={handleSubmit} >
           <label htmlFor="email" className="mx-auto w-11/12">
             <input
               type="email"
               id="email"
               className="border-2  border-t-0 border-x-0 border-b-white md:border-b-black md:text-black w-full rounded-lg truncate ... bg-inherit p-3 h-2/4 my-3 outline-none text-white"
               name="email"
-              value={task.email}
+              value={login.email}
               placeholder="johndoe@gmail.com"
               onChange={handleClick}
             />
           </label>
 
-          <label htmlFor="date" className="mx-auto w-11/12">
+          <label htmlFor="password" className="mx-auto w-11/12">
             <input
               type="password"
               id="password"
               className="border-2 border-t-0 border-x-0 bg-inherit border-b-white w-full rounded-md md:border-b-black md:text-black  focus:border-t-0 focus:border-x-0 truncate ...  p-3 h-2/4 my-3 outline-none"
-              name="Password"
-              value={task.password}
+              name="password"
+              value={login.password}
               placeholder="Password"
-              onChange={handleClick}
+              onChange={handleClick }
             />
+            <p
+             className={`pl-3 ${login.password.length < 6 && login.password.length !== 0 ? 'text-red-500' : 'text-green-500'}`}>{login.password.length < 6 && login.password.length !== 0 ? 'password too short' :'' }</p>
             <br />
           </label>
 
@@ -68,10 +91,10 @@ const Task = () => {
                 type="checkbox"
                 name="check"
                 id="check"
-                value={task.check}
+                value={login.check}
                 onClick={handleClick}
               />
-              <span> remember me</span>
+              <span> Remember me</span>
             </label>
 
             <Link to="/new_pwd">
@@ -80,9 +103,9 @@ const Task = () => {
           </div>
           
             <div className="btn-over mx-auto my-6  w-11/12">
-            <div onClick={go_home}  className=" w-10/12 button mx-auto bg-black mx-auto text-white text-center p-4 rounded-md font-bold my-3">
-                Button
-               </div>
+            <button onClick={signIn ? go_home : ()=>console.log('click again')}  className=" w-full button  bg-black mx-auto text-white text-center p-4 rounded-md font-bold my-3" >
+                Button {login.loginValid}
+               </button>
             </div>
         </form>
       </div>

@@ -1,11 +1,18 @@
 import React from "react";
-
+import {FaTwitter,FaFacebook,FaLinkedin, FaInstagram} from 'react-icons/fa'
 const Footer = () => {
   return (
     <div className=" w-full bg-black text-white relative grid grid-cols-2 lg:grid-cols-7 h-auto py-4 px-4">
-      <div className="col-span-2 lg:col-span-2 lg:ml-8 my-8">
+      <div className="col-span-2 lg:col-span-2 lg:ml-6 my-8 lg:text-start flex  text-center lg:justify-end flex-col ">
         <h1 className="text-2xl font-bold ">TalentQL</h1>
         <p className=" my-3 text-gray-300/70"> Tel: 080ALTSCHOOL</p>
+        <div className="flex gap-7 justify-center  lg:justify-start lg:items-center">
+          <FaTwitter />
+          <FaFacebook />
+          <FaLinkedin />
+          <FaInstagram />
+        </div>
+        
 
         </div>
 

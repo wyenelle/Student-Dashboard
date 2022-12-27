@@ -9,8 +9,9 @@ import {BsNewspaper} from 'react-icons/bs'
 
 const UserInfo = ({toggleDarkMode,darkMode}) => {
   const news = <Link to='/news'> news </Link>
+  const blog = <Link to='/'> Blog </Link>
 const list = [
-'Dashboard',
+blog,
 news,
 'Alt-Scores',
 'Videos',

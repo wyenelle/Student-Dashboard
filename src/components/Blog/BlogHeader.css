@@ -1,12 +1,20 @@
+.header{
+background: #eee;
+}
 .header-1{
-    background: url('../../assets/images-1.jpeg');
+    background: url('../../assets/images-1.png');
     background-size: 100% 100%;
 }
 .header-2{
-    background: url('../../assets/images-3.jpeg');
+    background: url('../../assets/images-2.png');
     background-size: 100% 100%;
 }
 .header-3{
-    background: url('../../assets/images-6.jpeg');
+    background: url('../../assets/images-3.png');
+    background-size: 100% 100%;
+}
+
+.header-4{
+    background: url('../../assets/images-4.png');
     background-size: 100% 100%;
 }
