@@ -7,6 +7,9 @@ import BlogHeader from "./BlogHeader";
 import BlogSchool from "./BlogSchool";
 import BlogNavbar from './BlogNavBar'
 import './Blog.css'
+import BlogAbout from "./BlogAbout";
+import BlogLearning from "./BlogLearning";
+import BlogFuture from "./BlogFuture";
 
 const Blog = () => {
   return (
@@ -19,13 +22,22 @@ const Blog = () => {
           <BlogHeader />
         </div>
         <div className="w-full">
+          <BlogAbout/>
+        </div>
+        <div className="w-full">
           <BlogSchool />
+        </div>
+        <div className="w-full">
+          <BlogLearning/>
         </div>
         <div className="block lg:hidden">
           <BlogAdmission />
         </div>
         <div className="hidden lg:block">
           <BlogAdmissionLg />
+        </div>
+        <div className="w-full">
+          <BlogFuture/>
         </div>
 
         <BlogCollab />

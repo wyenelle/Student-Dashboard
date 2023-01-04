@@ -3,8 +3,9 @@ import './UserInfo.css'
 import Info from './Info'
 import Reader from './reader.jpeg'
 import { Link } from 'react-router-dom'
-import {MdDashboard,MdScore,MdTask,MdNotes,MdVideoLibrary} from 'react-icons/md'
+import {MdDashboard,MdScore,MdTask,MdNotes,MdVideoLibrary,MdStar} from 'react-icons/md'
 import {BsNewspaper} from 'react-icons/bs'
+import {FaStar} from 'react-icons/fa'
 
 
 const UserInfo = ({toggleDarkMode,darkMode}) => {
@@ -26,7 +27,7 @@ const icons = [
   <MdTask />,
   <MdNotes />
 ]
-const resserve = ['<HiBanknotes/.','<MdAddTask />','<MdPersonalVideo />','<MdCreditScore />','<FaNewspaper />','<MdOutlineDashboard />']
+
   return (
     <section>
         <div className="section-list dark:text-gray-300" data-aos='zoom-in'>
@@ -36,10 +37,10 @@ const resserve = ['<HiBanknotes/.','<MdAddTask />','<MdPersonalVideo />','<MdCre
 
             <div className="performance grid grid-cols-2 gap-1 my-5">
                <div className="star border bg-gray-800 dark:bg-gray-200  dark:border-2 h-40 col-span-1 rounded md " data-aos='fade-right' data-aos-delay='400' data-aos-duration='600'>
-                      star
+                      <FaStar size={40} className='text-white'/>
                 </div>
                <div className="star border bg-gray-100 dark:bg-gray-800  dark:border-zinc-100/30 h-40 col-span-1 rounded-md " data-aos='fade-left' data-aos-delay='400' data-aos-duration='600'>
-                      star
+                      <MdStar size={40} />
                 </div>
             </div>
               

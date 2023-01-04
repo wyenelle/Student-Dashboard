@@ -5,7 +5,7 @@ const ForgotPassword = () => {
 
 const navigate = useNavigate()
 const go_to_welcome_page = ()=>(
-  navigate('/')
+  navigate('/login')
 )
 const go_to_confirmation_page =() => (
 navigate('/confirmation')

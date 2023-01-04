@@ -1,0 +1,22 @@
+.img{
+    animation: carousel 12s infinite;
+    /* transition: all .5s ease; */
+    }
+    @keyframes carousel{
+    0%{
+    transform: translateX(8px);
+    opacity: 0;
+    }
+    25%{
+    transform: translateX(0);
+    opacity: 1;
+    }
+    50%{
+    transform: translateX(0);
+    opacity: 1;
+    }
+    100%{
+    transform: translateX(-8px);
+    opacity: 0.5;
+    }
+    }

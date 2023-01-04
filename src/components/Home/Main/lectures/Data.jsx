@@ -1,24 +1,24 @@
 export  const lectures = [
     {
-      id : Math.floor(Math.random() * 100 ),
+      id : 1,
       title : 'Technical Writing',
       text : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, quaerat',
       complete : true
     },
     {
-      id : Math.floor(Math.random() * 100 ),
+      id : 2,
       title : 'React Router',
       text : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, quaerat',
       complete : true
     },
     {
-      id : Math.floor(Math.random() * 100 ),
+      id : 3,
       title : 'Lazy Loading',
       text : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, quaerat',
       complete : true
     },
     {
-      id : Math.floor(Math.random() * 100 ),
+      id : 4,
       title : 'Suspense',
       text : 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, quaerat',
       complete : true

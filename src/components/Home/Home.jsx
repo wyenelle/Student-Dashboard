@@ -28,10 +28,10 @@ const Home = ({student_id}) => {
           className={` px-3 md:col-span-3 text-center `}
         >
 
-          <Main student_id={student_id} />
+          <Main  />
         </div>
 
-        <div className=" hidden md:block md:col-span-1 text-center border border-slate-300/40">
+        <div className=" hidden md:block md:col-span-1 overflow-hidden text-center border border-slate-300/40">
           <RightSide />
         </div>
       </div>

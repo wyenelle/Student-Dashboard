@@ -1,0 +1,14 @@
+.arrow-right{
+    animation: move-right 3s infinite;
+}
+@keyframes move-right{
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(4px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
