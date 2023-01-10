@@ -4,6 +4,7 @@ import FirstArticle from './FirstArticle'
 import SecondArticle from './SecondArticle'
 import Motivation from './Motivation'
 import Video from '../../Videos/Video'
+import Objective from '../../objectives/Objective'
 
 
 const Main = ({student_id}) => {
@@ -11,7 +12,11 @@ const Main = ({student_id}) => {
     <main >
         <div className="grid grid-cols-2 dark:text-white">
             <div className="col-span-2">
-                <Header student_id={student_id} />
+                <Header />
+            </div>
+
+            <div className="col-span-2 md:col-span-2 ">
+                <Objective  />
             </div>
 
             <div className="col-span-2 md:col-span-1 ">

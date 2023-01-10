@@ -23,7 +23,6 @@ const Home = () => {
         <div className=" hidden md:col-span-1 sm:block  border border-slate-300/40  text-center p-4">
           <UserInfo toggleDarkMode={toggleDarkMode} darkMode={darkMode} /> 
         </div>
-
         <div
           className={` px-3 md:col-span-3 text-center `}
         >

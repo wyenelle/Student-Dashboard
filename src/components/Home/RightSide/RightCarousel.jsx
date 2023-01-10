@@ -31,15 +31,17 @@ const RightCarousel = () => {
       clearInterval(interval);
     };
   }, []);
-//  sudo
-// onepipe
-// RelianceHmo
-// piggvest
-// Riby
-// Aws
-// engage green
-// mono
-// norebase
+//  sudo https://sudo.africa/
+// onepipe https://onepipe.com/
+// RelianceHmo https://www.reliancehmo.com/
+// piggvest https://www.piggyvest.com/
+// Riby https://riby.ng/
+// Aws https://aws.amazon.com/free/?trk=73c6744c-29f5-4966-bdc7-8599174c182d&sc_channel=ps&s_kwcid=AL!4422!3!444219541634!e!!g!!aws&ef_id=CjwKCAiAk--dBhABEiwAchIwkcH78k0_EnMRlFMpiWJvZbYDpciGTqzFgBOWEOYtf3Bfjm0l3xGmFxoCn0IQAvD_BwE:G:s&s_kwcid=AL!4422!3!444219541634!e!!g!!aws&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all
+// engage https://engage.so/
+// mono https://mono.co/
+// norebase https://norebase.com/
+
+
 const handleMOuseEnter = () => {
   const linkBox = document.querySelector('.link-box')
   linkBox.classList.add('absolute')
