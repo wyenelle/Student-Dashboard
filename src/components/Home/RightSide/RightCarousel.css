@@ -1,5 +1,5 @@
 .img{
-    animation: carousel 12s infinite;
+    /* animation: carousel 12s infinite; */
     /* transition: all .5s ease; */
     }
     @keyframes carousel{
