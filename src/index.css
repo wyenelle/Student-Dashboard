@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,900&display=swap');
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -9,4 +11,7 @@
 }
 html{
 scroll-behavior:smooth;
+}
+h1{
+    font-family: 'Alegreya', serif;
 }

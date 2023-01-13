@@ -65,7 +65,7 @@ const RightCarousel = () => {
             alt="photo of brand"
             className="w-full h-full"
           />
-          <div className=" bg-black/50 link-box hidden top-0 h-full w-11/12 mx-auto flex flex-col items-center justify-center">
+          <div className=" bg-black/50 link-box hidden top-0 h-full w-full mx-auto flex flex-col items-center justify-center">
             <p>{slider[sliderCount].name}</p>
             <a href={slider[sliderCount].link} className="font-bold text-white">
               {" "}
