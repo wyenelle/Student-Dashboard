@@ -1,12 +1,12 @@
 import React from "react";
 import "./Home.css";
-import UserInfo from "./user-info/UserInfo";
+import UserInfo from "../../components/Home/user-info/UserInfo";
 import { useState } from "react";
-import Navbar from "./Navbar/Navbar";
-import RightSide from "./RightSide/RightSide";
-import Main from "./Main/Main";
-import Footer from "./Footer";
-import Modal from "../Modal/Modal";
+import Navbar from "../../components/Home/Navbar/Navbar";
+import RightSide from "../../components/Home/RightSide/RightSide";
+import Main from "../../components/Home/Main/Main";
+import Footer from "../../components/Home/Footer";
+import Modal from "../../components/Modal/Modal";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);

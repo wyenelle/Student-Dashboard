@@ -1,38 +1,21 @@
-import { useReducer } from "react";
 import "./Note.css";
 import Note_Item from "./Note_Item";
 import { FaPlusCircle,FaTrash} from "react-icons/fa";
-import {useContext} from 'react'
-import NoteDetails from "../context";
+import {useContext,useState} from 'react'
+import NoteDetails from "../context/context";
 
 
-const reducer = (delete_button_state,action) => {
-  switch (action.type) {
-    case 'delete':
-      console.log('hi`');
-      // return [delete_button_state]
-    default:
-      throw new Error('No such action')
-  }
-}
 
 
+let count = 1
 const Note = () => {
-  const {noteData,setShowModal,noteReady} = useContext(NoteDetails)
-  const {listOfNotes} = noteData
-  const [delete_button_state, dispatch] = useReducer(reducer,listOfNotes)
-  console.log(delete_button_state)
-  console.log(listOfNotes)
-  
+  const {noteData,setShowModal,noteReady,setNoteData,deleteNote} = useContext(NoteDetails)
+   console.log();
   const addToNote = () => {
     setShowModal(true)
   };
 
-  const deleteNote = (id) => {
-    console.log('hi')
-    dispatch({type: 'delete', payload: listOfNotes.filter(item => item !== id)})        
-    
-  };
+  
 
   
   return (
@@ -49,7 +32,7 @@ const Note = () => {
 
 
         <div className="h-60 overflow-scroll py-3 ">
-          {noteReady ?  listOfNotes.map((item, id) => (
+          {noteReady  ?  noteData.listOfNotes.map((item, id) => (
             <div key={id} className="mt-3 w-full grid grid-cols-5 border dark:border-0 shadow-md ">
              <div className="col-span-4">
              <Note_Item

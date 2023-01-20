@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import {useReducer} from 'react'
-import { FaRegWindowClose } from 'react-icons/fa'
+import { FaRegWindowClose, FaTrash } from 'react-icons/fa'
 import './Modal.css'
 
 // REDUCER
@@ -14,8 +15,6 @@ const reducer = (note, action) => {
           listOfNotes: [...note.listOfNotes, action.payload],
           noteAdded: true
         };
-      
-     
       default:
         throw new Error("No such action");
     }
@@ -28,7 +27,7 @@ const reducer = (note, action) => {
     noteAdded: false
   };
 
-const Modal = ({setNoteData,setNoteReady,setShowModal}) => {
+const Modal = ({setNoteData,setNoteReady,setShowModal,setDeleteNote}) => {
   const [note, dispatch] = useReducer(reducer, state);
 
     const handleChange = (e) => {
@@ -36,7 +35,7 @@ const Modal = ({setNoteData,setNoteReady,setShowModal}) => {
         dispatch({ type: name, payload: value });
         
       };
-
+      
       const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({ type: "add", payload: note.notes, clear: "" });
@@ -44,15 +43,20 @@ const Modal = ({setNoteData,setNoteReady,setShowModal}) => {
         setNoteReady(true)
         
       };
-      setNoteData(note)
+      
 
+      useEffect(() => {
+        setNoteData(note)
+      },[note])
 
+      
   return (
     <section className='border-4 border-black modal'>
         <div className=" flex items-center justify-center h-full">
         <form  className="w-6/12 mx-auto">
             <div className="flex justify-between items-center mb-2">
                 <h1 className="font-extrabold text-3xl text-white">Add Note</h1>
+                <FaTrash size={40} color='white'  />
                 <FaRegWindowClose size={40} className='text-red-500' onClick={() => setShowModal(false)}/>
             </div>
           <textarea

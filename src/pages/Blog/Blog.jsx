@@ -1,15 +1,15 @@
 import React from "react";
-import Footer from "../Home/Footer";
-import BlogAdmission from "./BlogAdmission";
-import BlogAdmissionLg from "./BlogAdmissionLg";
-import BlogCollab from "./BlogCollab";
-import BlogHeader from "./BlogHeader";
-import BlogSchool from "./BlogSchool";
-import BlogNavbar from './BlogNavBar'
+import Footer from "../../components/Home/Footer";
+import BlogAdmission from "../../components/Blog/BlogAdmission";
+import BlogAdmissionLg from "../../components/Blog/BlogAdmissionLg";
+import BlogCollab from "../../components/Blog/BlogCollab";
+import BlogHeader from "../../components/Blog/BlogHeader";
+import BlogSchool from "../../components/Blog/BlogSchool";
+import BlogNavbar from '../../components/Blog/BlogNavBar'
 import './Blog.css'
-import BlogAbout from "./BlogAbout";
-import BlogLearning from "./BlogLearning";
-import BlogFuture from "./BlogFuture";
+import BlogAbout from "../../components/Blog/BlogAbout";
+import BlogLearning from "../../components/Blog/BlogLearning";
+import BlogFuture from "../../components/Blog/BlogFuture";
 
 const Blog = () => {
   return (

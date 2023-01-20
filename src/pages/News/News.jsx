@@ -1,6 +1,6 @@
 import React from "react";
 import NewsDetails from "./NewsDetails";
-import Skeleton from "../Skeleton";
+import Skeleton from "../../components/Skeleton";
 import {Link} from 'react-router-dom'
 
 const News = ({ news, isLoading }) => {
