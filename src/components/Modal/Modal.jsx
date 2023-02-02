@@ -20,6 +20,8 @@ const reducer = (note, action) => {
           ...note,
           listOfNotes: action.payload
         };
+        case 'tapped':
+          return {...note, notes: action.payload}
     default:
       throw new Error("No such action");
   }
@@ -28,11 +30,11 @@ const reducer = (note, action) => {
 //  STATE OBJECT
 const state = {
   notes: "",
-  listOfNotes: [],
+  listOfNotes: ['hello','welcome to altschool'],
   noteAdded: false,
+  date: new Date().toLocaleDateString()
 };
-
-const Modal = ({ setNoteData, setNoteReady, setShowModal, removeNote }) => {
+const Modal = ({ setNoteData, setNoteReady, setShowModal, textNote, tapped }) => {
   const [note, dispatch] = useReducer(reducer, state);
 
   const handleChange = (e) => {
@@ -50,7 +52,10 @@ const Modal = ({ setNoteData, setNoteReady, setShowModal, removeNote }) => {
   const deleteNote = (id) => {
     dispatch( {type:'delete', payload: {...note, listOfNotes: note.listOfNotes.filter(item => item !== id)   }})
 };
-  removeNote ? deleteNote(       )
+  
+const handleTapOnNote = () => {
+  tapped && dispatch({type: 'tapped', payload: textNote})
+}
   useEffect(() => {
     setNoteData(note);
   }, [note]);
@@ -77,7 +82,6 @@ const Modal = ({ setNoteData, setNoteReady, setShowModal, removeNote }) => {
             value={note.notes}
             onChange={(e) => handleChange(e)}
           />
-
           <button
             onClick={(e) => handleSubmit(e)}
             className="border  border-blue-500 shadow-sm bg-blue-500 text-white font-extrabold capitalize rounded-md outline-none w-full px-2 py-3 mx-auto mt-3"
