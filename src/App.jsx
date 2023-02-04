@@ -43,7 +43,7 @@ console.log('tapped')
   // API for getting news headings on a page's section === 6674f85c9d3340868df7433236e92beb
   // Teachers
   // Add Search filter video capability to videos on main page 
-
+ 
   const news_api =
     "https://newsapi.org/v2/top-headlines?category=technology&country=us&pageSize=30&apiKey=6674f85c9d3340868df7433236e92beb";
 

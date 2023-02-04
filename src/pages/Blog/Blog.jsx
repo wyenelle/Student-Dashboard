@@ -1,15 +1,8 @@
 import React from "react";
 import Footer from "../../components/Home/Footer";
-import BlogAdmission from "../../components/Blog/BlogAdmission";
-import BlogAdmissionLg from "../../components/Blog/BlogAdmissionLg";
-import BlogCollab from "../../components/Blog/BlogCollab";
-import BlogHeader from "../../components/Blog/BlogHeader";
-import BlogSchool from "../../components/Blog/BlogSchool";
-import BlogNavbar from '../../components/Blog/BlogNavBar'
 import './Blog.css'
-import BlogAbout from "../../components/Blog/BlogAbout";
-import BlogLearning from "../../components/Blog/BlogLearning";
-import BlogFuture from "../../components/Blog/BlogFuture";
+import {BlogAdmission,BlogAdmissionLg,BlogAbout,BlogCollab,BlogFuture,BlogHeader,BlogSchool,BlogNavbar,BlogLearning,BlogFeatures,BlogAttach} from '../../components/Blog'
+
 
 const Blog = () => {
   return (
@@ -33,14 +26,15 @@ const Blog = () => {
         <div className="block lg:hidden">
           <BlogAdmission />
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden   lg:block">
           <BlogAdmissionLg />
         </div>
         <div className="w-full">
           <BlogFuture/>
         </div>
-
+        <BlogAttach />
         <BlogCollab />
+        <BlogFeatures/>
         <div className="-mb-10 border-b-0 w-full">
           <Footer />
         </div>

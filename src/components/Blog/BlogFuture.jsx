@@ -1,7 +1,7 @@
 import React from "react";
 import './BlogFuture.css'
 import {FaAngleDoubleRight} from 'react-icons/fa'
-
+import Students from '../../assets/future-students.jpg'
 
 const BlogFuture = () => {
     const styles = {
@@ -11,7 +11,9 @@ const BlogFuture = () => {
     <section style={styles} className="w-full  hidden md:block  ">
         <div className="flex items-center  justify-center">
       <div className="bg-white/70 w-full h-80  mt-10  grid grid-cols-2 ">
-      <div className="col-span-1 future-col-1">hello</div>
+      <div className="col-span-1 ">
+        <img src={Students} alt='students studying' className='w-full h-full'/>
+      </div>
         <div className="col-span-1  relative">
           
           <div className=" w-full absolute top-8 bg-white/50 shadow-lg h-4/5 -left-40 flex items-center">

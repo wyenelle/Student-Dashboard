@@ -2,8 +2,11 @@ import React from 'react'
 import { useState } from 'react'
 import School from './School'
 import './BlogSchool.css'
-
+import { AiOutlineAntDesign } from 'react-icons/ai'
+import {FcDataSheet} from 'react-icons/fc'
+import {DiJavascript} from 'react-icons/di'
 const BlogSchool = () => {
+    const icons = [<DiJavascript size={60}/>,<FcDataSheet  size={60}/>,<AiOutlineAntDesign size={60}/>]
 const [schools] = useState([
         {
             id : 1,
@@ -28,7 +31,7 @@ const [schools] = useState([
     <div>
         <div className="w-full blog-school grid grid-cols-1 md:grid-cols-3 border border-black p-3">
         {
-            schools.map(school => <School key={school.id} school={school} />)
+            schools.map((school,index) => <School key={school.id} school={school} icon={icons[index]} />)
         }
         </div>
         

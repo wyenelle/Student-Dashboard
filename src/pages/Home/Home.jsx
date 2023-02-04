@@ -6,7 +6,6 @@ import Navbar from "../../components/Home/Navbar/Navbar";
 import RightSide from "../../components/Home/RightSide/RightSide";
 import Main from "../../components/Home/Main/Main";
 import Footer from "../../components/Home/Footer";
-import Modal from "../../components/Modal/Modal";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);

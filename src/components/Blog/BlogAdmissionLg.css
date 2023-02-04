@@ -1,33 +1,33 @@
-.admission-detail{
-    transform: scale(1);
-    transition: all 0.5s ease;
+.admission-detail {
+  transform: scale(1);
+  transition: all 0.5s ease;
 }
-.admission-detail:hover{
-    transform: scale(1.1);
+.admission-detail:hover {
+  transform: scale(1.1);
+  color: white;
+}
+.num {
+  transition: all 0.5s ease;
+}
+.num:hover {
+  color: white;
+}
+.admission {
+}
+.admission-lg {
+  height: 60vh;
+}
+@keyframes blink {
+  0% {
     color: white;
-}
-.num{
-    transition: all .5s ease;
-}
-.num:hover{
-    color : white;  
-}
-.admission{
-}
-.admiss-lg{
-height:80vh;
-}
-@keyframes blink{
-    0%{
-        color : white;
-    }
-    20%{
-        color: whitesmoke;
-    }
-    75%{
-        color: gray;
-    }
-    100%{
-        color:white;
-    }
+  }
+  20% {
+    color: whitesmoke;
+  }
+  75% {
+    color: gray;
+  }
+  100% {
+    color: white;
+  }
 }

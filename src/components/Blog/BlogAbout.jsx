@@ -1,19 +1,20 @@
 import React from 'react'
 import './BlogAbout.css'
+import AltGirl from '../../assets/alt-girl.jpeg'
 import {FaAngleDoubleRight} from 'react-icons/fa'
 const BlogAbout = () => {
 
   return (
     <section  className="w-full">
       <div className='w-full'>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 pl-5">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 ">
         <div className="col-span-1 h-full">
-          <div className="flex justify-center h-full items-center">
-        <h1 className=" font-extrabold  flex items-center text-3xl h-full">Shaping The Future Of Work</h1>
-
-          </div>
+         <img src={AltGirl} alt='piture of a girl studying' className='h-full w-full'/>
         </div>
-        <div className="col-span-1 py-3 w-10/12">
+        <div className="col-span-1 py-3 pl-5 md:py-8 md:pl-8 w-10/12">
+          <h1 className="font-extrabold capitalize my-2 text-3xl">
+              Shaping the future of work
+          </h1>
         <p className="my-2 ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores fuga id provident totam. Sit ratione dolorum provident quo tenetur quos!zz
         </p>

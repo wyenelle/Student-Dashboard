@@ -1,0 +1,9 @@
+.attach{
+    height: 70vh;
+}
+.attachment-bg{
+    background: url('../../assets//alt-teachers.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
