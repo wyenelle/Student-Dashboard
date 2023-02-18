@@ -21,7 +21,7 @@ const blogAttach = () => {
         <div className="bg-black/70 h-full flex justify-center items-center">
           <div className="attach-info w-7/12 text-center text-white">
             <h1 className="font-bold text-xl">
-              what again
+              what 
             </h1>
 
             <div className=" md:w-5/12 border-4 ">
