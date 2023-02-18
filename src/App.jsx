@@ -29,7 +29,10 @@ const reducer = (note, action) => {
         return {...note, showModal: true}
       case 'close-modal':
         return {...note, showModal: false}
+      case 'tapped':
+        return {...note, showModal: true, notes: action.payload}
       case 'delete':
+        console.log(action.payload, 'hi')
         return {
           ...note,
           listOfNotes: action.payload
@@ -67,12 +70,11 @@ function App() {
 
   // send delete signal to the main source of truth - the modal reducer
   const deleteNote = (id) => {
-       setNoteData({...noteData, listOfNotes: noteData.listOfNotes.filter(item => item !== id)   })
-        setRemoveNote(true)
-  };
+    console.log( typeof id);
+       dispatch({type:'delete', payload: note.listOfNotes.filter(item => item !== id)   })
+      };
   const openNote = (id,item) => {
-    setTapped(true)
-    setTextNote(item)
+    dispatch({type: 'tapped',payload:item})
   }
   // Additional features to be added
 
@@ -95,7 +97,8 @@ function App() {
       value={{
         openNote,
         dispatch,
-        note
+        note,
+        deleteNote
         
         
       }}

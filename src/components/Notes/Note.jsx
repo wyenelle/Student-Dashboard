@@ -29,18 +29,17 @@ const Note = () => {
         </div>
 
         <div className="h-60 overflow-scroll py-3 ">
-          {note.noteReady
-            ? note.listOfNotes.map((item, id) => (
+          {note.listOfNotes.map((item, id) => (
                 <div
                   key={id}
-                  className="mt-3 w-full grid grid-cols-5 border dark:border-0 shadow-md "
+                  className="mt-3 w-full  border dark:border-0 shadow-md "
                 >
-                  <div className="col-span-4 border-2 border-black">
+                  <div className=" ">
                     <Note_Item key={id} item={item} id={id} />
                   </div>
                 </div>
               ))
-            : ""}
+            }
         </div>
       </div>
     </section>
