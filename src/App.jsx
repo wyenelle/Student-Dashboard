@@ -55,7 +55,11 @@ const state = {
   noteReady: false
 };
 
-
+//future - - - button h and text should start
+//  font
+//  school -- enroll should be bolder and bigger
+// admission sm -- padding right for last item
+// objective header bolder and maybe a bg
 
 function App() {
   const [note, dispatch] = useReducer(reducer, state);

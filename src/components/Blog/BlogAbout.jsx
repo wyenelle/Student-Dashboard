@@ -24,7 +24,7 @@ const BlogAbout = () => {
         </p>
 
 
-        <button className='bg-black text-white w-4/5 p-2 my-5 font-bold rounded shadow-md flex justify-center gap-2 items-center '> Find out more
+        <button className='bg-black h-10 text-white w-4/5 py-6 px-2 my-5 text-xl font-extrabold rounded shadow-md flex justify-start gap-2 items-center '> Find out more
         <FaAngleDoubleRight size={20} className='text-white arrow-right'/>
         </button>
         </div>

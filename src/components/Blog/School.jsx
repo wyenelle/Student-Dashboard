@@ -11,7 +11,7 @@ const School = ({school,icon}) => {
         <div className="">
             <h1 className='text-2xl font-bold my-3'>{school.name}</h1>
             <p className="desc mb-3">{school.desc} </p>
-            <Link to='/' className='font-extrabold'> Enroll now</Link>
+            <Link to='/' className='text-xl font-extrabold'> Enroll now</Link>
         </div>
     </div>
   )
