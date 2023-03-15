@@ -8,3 +8,7 @@
     /* border: 1px solid blue; */
     /* background-color: #eee; */
 }
+.front-bg{
+background: url('../../assets/partner-logo/sec.png');
+background-size: cover;
+}

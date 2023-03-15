@@ -12,8 +12,8 @@ const FrontPage = () => {
         navigate('/login')
     }
   return (
-    <main className="h-screen   px-3 w-full">
-      <section className="flex flex-col gap-4 justify-center items-center h-full">
+    <main className="h-screen front-bg  px-3 w-full">
+      <section className="flex flex-col gap-4 justify-center bg-white/70 items-center h-full">
       <div className="text-center mb-5">
             <h1 className="font-extrabold text-4xl">AltSchool Africa</h1>
         </div>
