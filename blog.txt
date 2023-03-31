@@ -1,0 +1,116 @@
+Student Dashboard
+- A walkthrough on the architecture of this project
+
+                 Table of content
+    - OVERVIEW AND DEPENDENCIES
+
+- React fun fact
+- images of instances
+- Third party libraries used 
+- packages used 
+- Learning Management system
+
+
+                        OVERVIEW
+Student Dashboard is a project that shows my progress with react in the last few months, thanks to my time at Altschool Africa. It is basically a Learning Management system that envelops as many resouces that students using the system can get access to while on the portal relative to their track of learning.
+
+
+
+I'll work through the architecture but before i do, i'd like bring to awareness some of the third-party dependencies that helps makes building this Learning Management system easier.
+
+- Axios
+     acccording to the docs - 'Axios is a promise based HTTP Client for nodejs and the browser. It can run in the browser and nodejs with the same codebase'. For this project i basically used it to get data from an APi call i made to get tech related news.
+     IMAGE
+
+- React Router DOM
+    The whole app si heavily dependent on this because it helps with routing through different pages on the app. i Used the version 6 which is the newest as of now. see more here https://reactrouter.com 
+    IMAGE
+
+-  React Icon
+    This library allows you include popular icons in your projects. This icons could be used in place of tect in many place and trust me, they are super easy to look. see more about it here https://react-icons-github.io/
+    IMAGE
+
+- Animation On Scroll (AOS)
+    AOS helps add cool effect on DOM elements when scrolling through your page. That's one cool way of keeping things alive on your page - Animations. see more on their docs here https://michalsnik.github.io/aos
+    IMAGE
+- Tailwind Css
+
+            THE STRUCTURE
+This project has a total of 6 pages. Each page has it's own structure.
+
+- Home Page
+    This page does nothin much. It just houses 2 links - To the blog page and another link to the Learning Management system. The Idea was to allows students quicker access to the Learning Management system as they don't really need to look at the blog plage each time they land on the home page. Hover above those card links to see some cool css effects.
+
+
+    But the blog page link is kept on the homepage should incase the students needed to see some new stuffs that had been addded to it. Some key features would be added to the Blog page and i needed that students get easier access to it, reason why it's there on the homepage. So what's on the blog page ? IMAGE
+
+
+- Blog Page
+    This page is the exact clone of the Altschool Africa home page. Since that's where i learnt how to use React and also where the inspirationf for the project came from, i decided to clone what they gad already in my own way. i'd like take a list of what the page offers. Each bullet list represent a section in the Blog page
+
+    - A header with a clear and consise message.
+    - An About section that explains futher who they are and what they stand for.
+    - The different schools under the conglomerate with each having a little information about what they do.
+    - This section tells that the school is open for anyone regardless of where you are from, or having doubts about transistion.
+    - A section that gives informtion about the school's admission process 
+    - Testimonies from Alunmi
+    - Section for interested companies open to collaborate
+    - Popular blog pages where you could read more on the school
+    - Finally, the footer should in case students or other users need more information about the school
+
+    Building this page, i made use of so many free stuffs from the internet like the images ( downloaded from Unsplash) and the png images used throughout the page from the internet.Also there was some neat use of CSS animations and a carousel i wrote myself. 
+    
+    I tried making the page as interactive as it could be with animation while considering performance and  Finally, a button with a nice scroll effect to take to you to the top of the page when you are at the footer.
+
+
+    - The Login Page
+        What i intended for at the begining was to get the students data on a database that could help with authentication. Students could log in with email address or student ID but i had to just settle for email login and password. Form validation considered, you could only login if your password isn't below 6 characters. React reducer was used here to hold state values intact while event handlers made dispatch calls to the reducer.
+
+    
+    - The Learning Management System (LMS)
+
+        The core of thid project, it houses everything the project is all about.This page is divided into 3 sections on large screen and just 1 column on a mobile screen. On a large screen, we have 
+        - The User Info section.
+        - The Main page.
+        - The Miscelleanous section
+
+        Animation On Scroll library (AOS) was largely on show here as almost all components showed off its own animation effect. It is also layered with Tailwind CSS grid syetm for responsiveness.
+
+                                User Info Section
+        This section starts off with the students photo and name (hard-coded for now). then moving down is a list of useful stuff each student has access to like:
+            - News button that leads to a page for tech related news.
+            - Videoes button that leads to a page for youtube videos for dditional learning right from the Learning Management system (in progress)
+            - Task button to see weekly Task (in progress)
+            - Alt-Score to see where and how you're performing for the semester (in progress)
+            - Summarybutton to see the smester's summary report (in progress)
+
+        Going further down that column is a button that toggles between dark and light mode and finally a log out button which takes you back to the login page.
+
+                                 The Main Section
+        A customised greeting message depending on the time of the day is the first thing on the Main section. Date is also attached to this greeting message. The idea was to display more meaningful content for users on logging in. 
+
+        Like the original Altschool LMS, there is an objective section that tells students what they should expect from the course for the week and goals for the semester. That's just what you see here. TailWind came through for me here as i didn't have to write too much CSS. i just gave a height and told tailwind how i wanted contents to overflow the container.
+
+        Additionally, there are 3 cards that the school could use to display different numeric data to students. It could be used for any thing at all. On the same row is the 'Motivation box'. Dispalys a motivational quote eeryday.
+
+        Moving on is a 'Topic' section. This is where all the lecture for the week is housed. The List can be collapsed to show all topics or collapsed tos hoe just one topic; whichever you want. I learnt how to localize React state while rendering a list here and also using the global state at the same time 
+
+        The Video section is the last sub-section in this section. It just takes you to the main Altschool video content on clicking on any of the videos.
+
+                                The Miscelleneous Section
+        Late last year was when AltSchool Africa started securing partnerships with differnt companies so i saw it as a good idea to add them to this part of the screen. It's a carousel that scrolls through each one of the partners available as at the time of this writing. Every image slide is image that has shows a link to its homepage when it's hovered on shuld in case student feel like knowing a little about the company.
+        The carousel was bulit with vanilla javascript and CSS animations. Very tricky but i later had to find out my javscript setInterval second parameter had to be the exact value as my CSS animation duration. Any other value produced irregularities.
+
+        While learning, there are things you dont want to forget easily so you pen them down somwhere safe. That's is what the next section addresses. The simple Note App allows students take note,delete note and save notes for future references. I had issues building this part because i needed to decided where my state would live. What brought about the complexity was the fact that i solely wanted the Note App to be in a modal. After so much writing and deleting, i found a way to implement it. Statee had to stay in the App.js file as a reducer while i passed my dispatch function to the whole app  through React Context Provider making it accessible to some deeply nested components to gain access to the modal. I learnt hard from this.
+    
+
+
+    - The Forgot Password Page
+        Holds a form that would help reinstate students that had issues with loggin into the LMS
+
+    - The News Page
+        Powered byt the Technews API, it dispalys new tech news from trusted sources for big tech companies. Atleast, students should know whats going on in the tech eco-system
+
+
+
+    In conclusion, this project is all about providing different resouces for the student all from the comfort of the LMS without having to surf the internet too much. Features would be added in the future to enhance the user experience because it's the most important factor in consideration upon building this.
