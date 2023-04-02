@@ -20,7 +20,7 @@ pipeline {
 
         stage ("Docker run app"){
             steps{
-                sh "docker compose up"
+                sh "docker compose up --build -d"
             }
         }
     }
