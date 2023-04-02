@@ -18,6 +18,10 @@ pipeline {
             }
         }
 
-        
+        stage ("Docker run app"){
+            steps{
+                sh "docker compose up"
+            }
+        }
     }
 } 
