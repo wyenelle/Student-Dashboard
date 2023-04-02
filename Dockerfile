@@ -25,7 +25,7 @@ WORKDIR /usr/share/nginx/html/
 RUN rm -rf ./*
 
 # Copy built assets from `builder` image
-COPY --from=builder /app/build/  .
+COPY --from=builder /app/dist/  .
 
 EXPOSE 5173 80
 
