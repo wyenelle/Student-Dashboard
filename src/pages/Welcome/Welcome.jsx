@@ -1,24 +1,10 @@
-import React, { useEffect } from 'react'
 import './Welcome.css'
 import Task from '../Task/Task'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 import { FaFacebook, FaTwitter } from 'react-icons/fa'
-import Form from '../Task/form'
 const Welcome = () => {
-  useEffect(()=>{    
-    AOS.init()
-    let attr = document.querySelector('#ov')
-
-    return () => {
-      attr.removeAttribute('data-aos')
-        attr.removeAttribute('data-aos-delay')
-        attr.removeAttribute('data-aos-duration')
-    }
-  },[])
   return (
-    <div className=' w-full overall h-screen border-2    flex items-center welcome md:bg-none ' data-aos='fade-in' data-aos-delay='400' data-aos-duration='700' id='ov'>  
+    <div className=' w-full overall h-screen border-2    flex items-center welcome md:bg-none '>  
 
       <div className="w-10/12 md:w-11/12 rounded-md shadow-lg flex justify-center  items-center mx-auto md:grid md:grid-cols-2  md:h-full">
 

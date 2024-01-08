@@ -1,11 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import AOS from "aos";
-import { useNavigate, Link } from "react-router-dom";
-import "aos/dist/aos.css";
-import { BiTrendingUp } from "react-icons/bi";
+import { useNavigate} from "react-router-dom";
 import { VscBellDot } from "react-icons/vsc";
-import { FaStarHalfAlt, FaClock, FaBell } from "react-icons/fa";
 
 const Header = () => {
   const list_of_month = [
@@ -75,9 +71,6 @@ const Header = () => {
     navigate("/news");
     console.log(showPing);
   };
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   return (
     <header
